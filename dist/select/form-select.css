@@ -1,0 +1,110 @@
+.form-select {
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    user-select: none;
+    cursor: pointer;
+    direction: rtl;
+    position: relative;
+}
+
+.form-select[aria-expanded='true'] {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #80bdff;
+}
+
+.form-select__input {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem .375rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    position: relative;
+    border-radius: .25rem;
+}
+
+.form-select__input::before {
+    content: "";
+    position: absolute;
+    left: .75rem;
+    top: calc(50% - 6px);
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-color: #495057;
+    transform: rotate(-135deg);
+    transition: 330ms;
+}
+
+.form-select[aria-expanded='true'] .form-select__input::before {
+    top: calc(50% - 4px);
+    transform: rotate(45deg);
+}
+
+.form-select__input::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 1.5rem);
+    height: 1px;
+    background-color: transparent;
+}
+
+.form-select[aria-expanded='true'] .form-select__input::after {
+    /* background-color: #ced4da; */
+}
+
+.form-select__list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #80bdff;
+    border-radius: .25rem;
+    overflow: hidden;
+    z-index: 999999;
+}
+
+.form-select[aria-expanded='true'] .form-select__input+.form-select__list {
+    display: block;
+}
+
+.form-select__list li {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem ;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+
+.form-select__list li:hover {
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,40 @@
+.stars-rating {
+    cursor: pointer;
+    display: flex;
+}
+
+.stars-rating:hover .star polygon {
+    fill: #ffd055 !important;
+}
+
+.stars-rating .star polygon {
+    fill: #d8d8d8;
+}
+
+.stars-rating .star:hover~.star polygon {
+    fill: #d8d8d8 !important;
+}
+
+.stars-rating[data-stars] .star polygon {
+    fill: #ffd055;
+}
+
+.stars-rating[data-stars="1"] .star:nth-child(1)~.star polygon {
+    fill: #d8d8d8;
+}
+
+.stars-rating[data-stars="2"] .star:nth-child(2)~.star polygon {
+    fill: #d8d8d8;
+}
+
+.stars-rating[data-stars="3"] .star:nth-child(3)~.star polygon {
+    fill: #d8d8d8;
+}
+
+.stars-rating[data-stars="4"] .star:nth-child(4)~.star polygon {
+    fill: #d8d8d8;
+}
+
+.stars-rating[data-stars="5"] .star:nth-child(5)~.star polygon {
+    fill: #d8d8d8;
+}
